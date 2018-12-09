@@ -4,8 +4,6 @@ A simple API to get subscriber count of pewdiepie and tseries.
 
 <div class="container">
 
-<h1>pewdiepie-vs-tseries
-</h1>
 
 <hr>
 
