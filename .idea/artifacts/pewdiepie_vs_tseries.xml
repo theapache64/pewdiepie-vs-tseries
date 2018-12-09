@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pewdiepie-vs-tseries">
+    <output-path>$PROJECT_DIR$/out/artifacts/pewdiepie_vs_tseries</output-path>
+    <root id="archive" name="pewdiepie-vs-tseries.war">
+      <element id="artifact" artifact-name="pewdiepie-vs-tseries:war exploded" />
+    </root>
+  </artifact>
+</component>

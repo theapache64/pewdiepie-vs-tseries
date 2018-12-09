@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pewdiepie-vs-tseries:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pewdiepie_vs_tseries_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="pewdiepie-vs-tseries/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pewdiepie-vs-tseries" />
+          <element id="module-output" name="webengine" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/gson-2.8.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/gson-2.8.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
