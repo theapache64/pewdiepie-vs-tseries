@@ -62,9 +62,9 @@ contains total <b>1
 
 ```json
 {
-"error": false,
-"message": "SUCCESS_MESSAGE",
-"data": {}
+    "error": false,
+    "message": "SUCCESS_MESSAGE",
+    "data": {}
 }
 ```
 
@@ -73,8 +73,8 @@ contains total <b>1
 <h3>Error response format</h3>
 ```json
 {
-"error": true,
-"message": "ERROR_MESSAGE"
+    "error": true,
+    "message": "ERROR_MESSAGE"
 }
 ```
 </div>
