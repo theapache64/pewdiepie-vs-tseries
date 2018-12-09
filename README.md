@@ -1,12 +1,6 @@
 # pewdiepie-vs-tseries
 A simple API to get subscriber count of pewdiepie and tseries.
 
-
-<div class="container">
-
-
-<hr>
-
 <h2>API Documentation</h2>
 <p>This is a lightweight web service, (REST interface), which provides an easy way to access
 <b>`pewdiepie-vs-tseries`</b> data. The
@@ -69,12 +63,14 @@ contains total <b>1
 <br>
 
 <h3>Error response format</h3>
+
 ```json
 {
     "error": true,
     "message": "ERROR_MESSAGE"
 }
 ```
+
 </div>
 </div>
 
@@ -191,9 +187,4 @@ contains total <b>1
 </div>
 </div>
 </div>
-</div>
-
-
-
-
 </div>
