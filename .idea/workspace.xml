@@ -45,7 +45,11 @@
       </file>
       <file leaf-file-name="context.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="StatusResponse.java" pinned="false" current-in-tab="false">
@@ -450,12 +454,12 @@
       <updated>1544331766341</updated>
       <workItem from="1544331769827" duration="698000" />
       <workItem from="1544336475635" duration="2165000" />
-      <workItem from="1544370088519" duration="6240000" />
+      <workItem from="1544370088519" duration="6249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9103000" />
+    <option name="totallyTimeSpent" value="9112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -481,8 +485,8 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996016" weight="0.32917318" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32917318" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33944222" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32917318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33944222" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -719,7 +723,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
