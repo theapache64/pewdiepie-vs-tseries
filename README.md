@@ -59,31 +59,26 @@ contains total <b>1
 <div class="row">
 <div class="col-md-9">
 <h3>Success response format</h3>
-<label for="tDefaultSuccessResponse"></label><textarea
-id="tDefaultSuccessResponse">{
+
+```json
+{
 "error": false,
 "message": "SUCCESS_MESSAGE",
 "data": {}
-}</textarea>
+}
+```
 
 <br>
 
 <h3>Error response format</h3>
-<label for="tDefaultErrorResponse"></label><textarea
-id="tDefaultErrorResponse">{
+```json
+{
 "error": true,
 "message": "ERROR_MESSAGE"
-}</textarea>
+}
+```
 </div>
 </div>
-
-<div id="toggleRouteContentVisibility" style="cursor:pointer;margin-top:10px;align-items: center"
-class="pull-right no-print">
-<button class="btn btn-primary">
-<span class="glyphicon glyphicon-eye-open"></span> Expand All Routes
-</button>
-</div>
-
 
 
 <div>
@@ -92,7 +87,6 @@ class="pull-right no-print">
 .
 </small>
 /get_data
-<span class="label label-sm label-primary">GET</span>
 </h3>
 
 <br>
@@ -138,15 +132,17 @@ class="pull-right no-print">
 
 <div class="row">
 <div class="col-md-10">
-<textarea class="default_response" name="response"
-placeholder="Response" title="JSON">{
-"error": false,
-"message": "This is a sample success message",
-"data": {
-"pew_die_pie": "42342342423",
-"t_series": "523452346"
+
+```json
+{
+    "error": false,
+    "message": "This is a sample success message",
+    "data": {
+        "pew_die_pie": "42342342423",
+        "t_series": "523452346"
+    }
 }
-}</textarea>
+```
 </div>
 </div>
 
