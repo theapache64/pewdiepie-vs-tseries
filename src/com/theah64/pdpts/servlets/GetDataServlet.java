@@ -1,10 +1,13 @@
-package com.theah64.pdpts;
+package com.theah64.pdpts.servlets;
 
 import com.google.gson.GsonBuilder;
+import com.theah64.pdpts.database.Data;
+import com.theah64.pdpts.pojos.DataBean;
 import com.theah64.pdpts.responses.GetDataResponse;
 import com.theah64.pdpts.utils.APIResponse;
 import com.theah64.pdpts.youtube.YouTubeAPI;
 import com.theah64.pdpts.youtube.responses.ChannelStatsResponse;
+import com.theah64.webengine.database.querybuilders.QueryBuilderException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.sql.SQLException;
 
 @WebServlet(urlPatterns = {"/v1/get_data"})
 public class GetDataServlet extends HttpServlet {
@@ -44,6 +48,14 @@ public class GetDataServlet extends HttpServlet {
                         pdpSubCountString
                 );
 
+                // Adding to db
+                Data.getInstance().add(new DataBean(
+                        null,
+                        pdpSubCountString,
+                        tsSubCountString,
+                        null
+                ));
+
                 final String jsonResp = new GsonBuilder().create().toJson(getDataResponse);
 
                 resp.getWriter().write(
@@ -56,7 +68,7 @@ public class GetDataServlet extends HttpServlet {
             }
 
 
-        } catch (IOException | JSONException e) {
+        } catch (IOException | JSONException | SQLException | QueryBuilderException e) {
             e.printStackTrace();
 
             // SERVER ERROR

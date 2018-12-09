@@ -1,14 +1,9 @@
 package com.theah64.pdpts.pojos;
 
-import java.math.BigInteger;
-
 public class DataBean {
-    private final String id;
-    private final BigInteger pdpSub;
-    private final BigInteger tsSub;
-    private final BigInteger timeStamp;
+    private final String id, pdpSub, tsSub, timeStamp;
 
-    public DataBean(String id, BigInteger pdpSub, BigInteger tsSub, BigInteger timeStamp) {
+    public DataBean(String id, String pdpSub, String tsSub, String timeStamp) {
         this.id = id;
         this.pdpSub = pdpSub;
         this.tsSub = tsSub;
@@ -19,15 +14,15 @@ public class DataBean {
         return id;
     }
 
-    public BigInteger getPdpSub() {
+    public String getPdpSub() {
         return pdpSub;
     }
 
-    public BigInteger getTsSub() {
+    public String getTsSub() {
         return tsSub;
     }
 
-    public BigInteger getTimeStamp() {
+    public String getTimeStamp() {
         return timeStamp;
     }
 }
