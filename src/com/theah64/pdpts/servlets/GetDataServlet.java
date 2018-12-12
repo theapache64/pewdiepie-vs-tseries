@@ -11,7 +11,6 @@ import com.theah64.webengine.database.querybuilders.QueryBuilderException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,10 +42,28 @@ public class GetDataServlet extends HttpServlet {
                 final String tsSubCountString = tsStats.getItems().get(0).getStatistics().getSubscribercount();
                 final String pdpSubCountString = pdpStats.getItems().get(0).getStatistics().getSubscribercount();
 
+                // conversion for comparison
+                final BigInteger tsSub = new BigInteger(tsSubCountString);
+                final BigInteger pdpSub = new BigInteger(pdpSubCountString);
+                final BigInteger diff = tsSub.subtract(pdpSub);
+                final int cmpRes = tsSub.compareTo(pdpSub);
+                String lead;
+                if (cmpRes == 0) {
+                    lead = "both";
+                } else if (cmpRes > 0) {
+                    lead = "t_series";
+                } else {
+                    // < 0
+                    lead = "pew_die_pie";
+                }
+
                 final GetDataResponse getDataResponse = new GetDataResponse(
                         tsSubCountString,
-                        pdpSubCountString
-                );
+                        pdpSubCountString,
+                        new GetDataResponse.Analysis(
+                                lead,
+                                diff.abs().toString()
+                        ));
 
                 // Adding to db
                 Data.getInstance().add(new DataBean(
@@ -56,7 +73,10 @@ public class GetDataServlet extends HttpServlet {
                         null
                 ));
 
-                final String jsonResp = new GsonBuilder().create().toJson(getDataResponse);
+                final String jsonResp = new GsonBuilder()
+                        .setPrettyPrinting()
+                        .setLenient()
+                        .create().toJson(getDataResponse);
 
                 resp.getWriter().write(
                         new APIResponse("OK", new JSONObject(jsonResp))

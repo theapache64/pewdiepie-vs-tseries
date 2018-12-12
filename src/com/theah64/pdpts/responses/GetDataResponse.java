@@ -14,19 +14,36 @@ public class GetDataResponse {
     @SerializedName("pew_die_pie")
     private final String pewDiePie;
 
+    @SerializedName("analysis")
+    private final Analysis analysis;
 
-    public GetDataResponse(String tSeries, String pewDiePie) {
+
+    public GetDataResponse(String tSeries, String pewDiePie, Analysis analysis) {
         this.tSeries = tSeries;
         this.pewDiePie = pewDiePie;
-    }
-
-    public String getTSeries() {
-        return tSeries;
-    }
-
-    public String getPewDiePie() {
-        return pewDiePie;
+        this.analysis = analysis;
     }
 
 
+    public static class Analysis {
+
+        @SerializedName("lead")
+        private final String lead;
+
+        @SerializedName("difference")
+        private final String difference;
+
+        public Analysis(String lead, String difference) {
+            this.lead = lead;
+            this.difference = difference;
+        }
+
+        public String getLead() {
+            return lead;
+        }
+
+        public String getDifference() {
+            return difference;
+        }
+    }
 }
